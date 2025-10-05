@@ -5,18 +5,26 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Login {
- 
-	@FindBy(id="twotabsearchtextbox")
-	private WebElement loginbutton;
+public class Filter {
 	
-	public Login(WebDriver driver)
 	
+	@FindBy(xpath="//a[text()='Mobiles']")
+	
+	private WebElement  filterbutton;
+	
+
+	
+	public Filter(WebDriver driver)
 	{
 		PageFactory.initElements(driver, this);
 	}
-	public void loginbutton()
+	public void filterbutton()
 	{
-		loginbutton.sendKeys("Mobile");
+		filterbutton.click();
 	}
+	
+	
+	
+	
+
 }
